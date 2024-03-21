@@ -4,3 +4,48 @@
   width: min(100% - $gap-x2, $container-size);
   margin-inline: auto;
 }
+
+%grid-item {
+  grid-area: html;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+}
+
+%grid-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  background-position: 50% 50%;
+  transition: 0.5s;
+  background-size: cover;
+}
+
+%grid-title {
+  display: flex;
+  justify-content: center;
+}
+
+%grid-link {
+  transition: 0.5s;
+  z-index: 2;
+  padding: 20px;
+  transition: color 0.5s;
+}
+
+%grid-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $color-primary;
+  opacity: 80%;
+  transition: 0.5s;
+}

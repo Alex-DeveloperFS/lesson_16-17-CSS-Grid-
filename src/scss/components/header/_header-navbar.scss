@@ -4,7 +4,7 @@
 
 .header__navbar {
 
-  margin-top: 20px;
+
 
   &--list {
     margin: 0;
@@ -12,8 +12,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
     justify-content: end;
-    gap: $gap;
+    gap: 17px;
     font-weight: 400;
+    margin-right: -10px;
 
   }
 
@@ -27,7 +28,7 @@
     letter-spacing: 2px;
     color: $color-white;
     display: block;
-    padding: 20px;
+    padding: 10px;
     transition: 0.3s;
 
     &:hover,&:focus {
