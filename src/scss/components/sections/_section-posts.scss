@@ -1,0 +1,354 @@
+@use "../../presets" as *;
+@use "../../mixins/index" as *;
+
+.section-posts {
+  @extend %container;
+}
+
+.posts__title {
+
+  font-size: 40px;
+  letter-spacing: 4px;
+  line-height: 48px;
+  color: $color-primary;
+  font-weight: 700;
+  font-family: $font-main;
+  margin-top: 50px;
+}
+
+.posts__box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "gr1 gr1 gr2 gr3"
+    "gr4 gr5 gr6 gr6";
+  height:  550px;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+.posts__group-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "p1"
+    "t1";
+  grid-area: gr1;
+height:  550px;
+}
+
+.posts__image-1 {
+  grid-area: p1;
+}
+
+.posts__text-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.posts__title-1 {
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  color: $color-primary;
+  font-weight: 700;
+  font-family: $font-main;
+  text-align: center;
+}
+
+.posts__description-1 {
+  grid-area: t1;
+  width: 567px;
+  height: 68px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-primary;
+  font-weight: 400;
+  font-family: $font-main;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.posts__group-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "p2"
+    "t2";
+  grid-area: gr2;
+  height:  550px;
+}
+
+.posts__image-2 {
+  grid-area: p2;
+}
+
+.posts__text-2 {
+  grid-area: t2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.posts__title-2 {
+  width: 275px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  color: $color-primary;
+  font-weight: 700;
+  font-family: $font-main;
+  text-align: center;
+}
+
+
+.posts__description-2 {
+  width: 275px;
+  height: 68px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-primary;
+  font-weight: 400;
+  font-family: $font-main;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.posts__group-3 {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "p3"
+    "t3";
+  grid-area: gr3;
+  height:  550px;
+}
+
+.posts__image-3 {
+  grid-area: p3;
+}
+
+.posts__text-3 {
+  grid-area: t3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.posts__title-3 {
+  width: 275px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  color: $color-primary;
+  font-weight: 700;
+  font-family: $font-main;
+  text-align: center;
+}
+
+.posts__description-3 {
+  width: 275px;
+  grid-area: t3;
+  height: 68px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-primary;
+  font-weight: 400;
+  font-family: $font-main;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+.posts__group-4 {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "p4"
+    "t4";
+  grid-area: gr4;
+  height:  550px;
+}
+
+.posts__image-4 {
+  grid-area: p4;
+}
+
+.posts__text-4 {
+  grid-area: t4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.posts__title-4 {
+  width: 275px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  color: $color-primary;
+  font-weight: 700;
+  font-family: $font-main;
+  text-align: center;
+}
+
+.posts__description-4 {
+  width: 275px;
+  grid-area: t3;
+  height: 68px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-primary;
+  font-weight: 400;
+  font-family: $font-main;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.posts__group-5 {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "p5"
+    "t5";
+  grid-area: gr5;
+  height:  550px;
+}
+
+.posts__image-5 {
+  grid-area: p5;
+}
+
+.posts__text-5 {
+  grid-area: t5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.posts__title-5 {
+  width: 275px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  color: $color-primary;
+  font-weight: 700;
+  font-family: $font-main;
+  text-align: center;
+}
+
+.posts__description-5 {
+  width: 275px;
+  grid-area: t5;
+  height: 68px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-primary;
+  font-weight: 400;
+  font-family: $font-main;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.posts__group-6 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "p6"
+    "t6";
+  grid-area: gr6;
+  height:  550px;
+}
+
+.posts__image-6 {
+  grid-area: p6;
+}
+
+.posts__text-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.posts__title-6 {
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  color: $color-primary;
+  font-weight: 700;
+  font-family: $font-main;
+  text-align: center;
+}
+
+.posts__description-6 {
+  grid-area: t6;
+  width: 567px;
+  height: 68px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-primary;
+  font-weight: 400;
+  font-family: $font-main;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.skills-btn__box {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 2px;
+
+
+  .skills-btn {
+    opacity: 0.800;
+    width: 350px;
+    height: 60px;
+    background-color: #2d3651;
+    border: 2px solid #2d3651;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+
+
+    &:hover {
+      background-color: #d66926;
+      border: 2px solid #2d3651;
+    }
+
+    &__link {
+      font-size: 18px;
+      letter-spacing: 2px;
+      color: $color-white;
+      font-weight: 400;
+      font-family: "Roboto";
+    }
+  }
+}

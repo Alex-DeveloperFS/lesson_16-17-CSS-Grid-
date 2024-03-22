@@ -56,6 +56,7 @@ grid-area: about__text;
   color: $color-gray;
   font-weight: 400;
   font-family: $font-main;
+  width: 936px;
 }
 
 .about__text p:first-of-type::after {
@@ -72,33 +73,9 @@ grid-area: about__text;
   opacity: 10%;
 }
 
-//.about__content p:first-of-type {
-//  position: relative;
-//  margin-top: -5px;
-//}
-//.about__content p:first-of-type::after {
-//  position: absolute;
-//  top: 0;
-//  width: 2px;
-//  height: 200px;
-//  content: "";
-//  background-color: rgba(99, 117, 136, 0.1);
-//}
-//.about__content p:last-of-type {
-//  margin: 0;
-//}
-//.about__image {
-//  display: grid;
-//  align-content: center;
-//  justify-items: center;
-//}
 
 .about__picture {
   grid-area: about__picture;
   margin-top: 102px;
-
-}
-
-.about__image {
 
 }
