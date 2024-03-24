@@ -1,0 +1,72 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.footer {
+  background-color: $color-primary;
+  min-height: 250px;
+  margin-top: 101px;
+}
+
+.footer__container {
+  @extend %container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__svg--list {
+  display: flex;
+  position: relative;
+  margin-top: 45px;
+  gap: 18px;
+
+  &::after {
+    position: absolute;
+    bottom: -29px;
+    left: 77px;
+    width: 75px;
+    height: 2px;
+    content: "";
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.footer__svg__item {
+  font-size: 36px;
+  transition: 0.5s;
+&:hover {
+  color: $color-accent;
+}
+
+}
+
+.footer__copy {
+  margin-top: 59px;
+}
+
+.footer__copy--text-1 {
+
+  font-size: 16px;
+  letter-spacing: 4.8px;
+  line-height: 20px;
+  color: $color-gray-light;
+  font-weight: 100;
+  font-family: $font-main;
+  text-align: center;
+
+  margin-top: -1px;
+  margin-left: 3px;
+}
+
+.footer__copy--text-2 {
+
+  font-size: 16px;
+  letter-spacing: 0.9px;
+  line-height: 20px;
+  color: $color-gray-light;
+  font-weight: 700;
+  font-family: $font-main;
+  text-align: center;
+
+
+}

@@ -51,3 +51,13 @@
 @mixin box-shadow {
   box-shadow: -3px 3px 20px -10px darken($color-gray-dark, 40%);
 }
+
+@mixin posts__title--item {
+  font-size: 18px;
+  letter-spacing: 1.3px;
+  line-height: 20px;
+  color: $color-gray;
+  font-weight: 700;
+  font-family: $font-main;
+  text-align: center;
+}
