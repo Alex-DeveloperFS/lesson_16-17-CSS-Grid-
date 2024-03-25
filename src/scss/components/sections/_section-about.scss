@@ -8,74 +8,72 @@
   margin-top: 40px;
 }
 
-.about__container {
-  @extend %container;
-  display: grid;
-  grid-template-columns: 1fr 271px;
-  grid-template-rows: 1fr;
-  grid-auto-flow: row;
-  gap: 10px 10px;
-  grid-template-areas:
+.about {
+  &__container {
+    @extend %container;
+    display: grid;
+    grid-template-columns: 1fr 271px;
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+    gap: 10px 10px;
+    grid-template-areas:
     " about__text about__picture";
+  }
 
-}
+  &__text {
+    grid-area: about__text;
+  }
 
-.about__text {
-grid-area: about__text;
-}
+  &__title {
+    font-size: 40px;
+    letter-spacing: 3.5px;
+    line-height: 48px;
+    color: $color-primary;
+    font-weight: 700;
+    font-family: $font-header;
+    margin-top: 99px;
 
-.about__title {
-  font-size: 40px;
-  letter-spacing: 3.5px;
-  line-height: 48px;
-  color: $color-primary;
-  font-weight: 700;
-  font-family: $font-header;
-  margin-top: 99px;
-}
+    &--span {
+      letter-spacing: 4.3px;
+    }
+  }
 
-.about__title--span {
-  letter-spacing: 4.3px;
-}
+  &__description--box {
+    width: 936px;
+    height: 319px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin-top: 50px;
+    position: relative;
+  }
 
-.about__description--box {
-  width: 936px;
-  height: 319px;
-  display: flex;
-  flex-direction: column;
- row-gap: 16px;
-  margin-top: 50px;
-  position: relative;
-}
+  &__description--item {
+    font-size: 18px;
+    letter-spacing: 0.9px;
+    line-height: 24px;
+    color: $color-gray;
+    font-weight: 400;
+    font-family: $font-main;
+    width: 936px;
+  }
 
-.about__description--item {
+  &__text p:first-of-type::after {
+    right: -50px;
+  }
 
-  font-size: 18px;
-  letter-spacing: 0.9px;
-  line-height: 24px;
-  color: $color-gray;
-  font-weight: 400;
-  font-family: $font-main;
-  width: 936px;
-}
+  &__text p:first-of-type::after {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 200px;
+    content: "";
+    background-color: black;
+    opacity: 10%;
+  }
 
-.about__text p:first-of-type::after {
-  right: -50px;
-}
-
-.about__text p:first-of-type::after {
-  position: absolute;
-  top: 0;
-  width: 2px;
-  height: 200px;
-  content: "";
-  background-color: black;
-  opacity: 10%;
-}
-
-
-.about__picture {
-  grid-area: about__picture;
-  margin-top: 102px;
-
+  &__picture {
+    grid-area: about__picture;
+    margin-top: 102px;
+  }
 }

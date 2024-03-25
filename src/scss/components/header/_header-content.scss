@@ -1,5 +1,6 @@
 @use "../../presets" as *;
 @use "../../mixins" as *;
+@use "../../common" as *;
 
 .header-content {
   position: relative;
@@ -12,9 +13,19 @@
   &__title {
     text-align: center;
     font-weight: 300;
-    color: #ffffff;
+    font-family: $font-header;
+    font-size: 60px;
+    letter-spacing: 4.7px;
+    color: $color-white;
+    line-height: 1.2em;
+    margin-top: 0;
 
-
+    @include lg {
+      letter-spacing: 3.1px;
+      font-size: 40px;
+      margin-top: 5px;
+      margin-left: 4px;
+    }
   }
 
   &__actions {
@@ -22,6 +33,12 @@
     justify-content: center;
     gap: $gap;
     margin-top: 53px;
-    margin-left: 3px;
+    margin-left: 4px;
+
+    @include lg {
+      margin-top: 41px;
+      margin-left: 2px;
+
+    }
   }
 }

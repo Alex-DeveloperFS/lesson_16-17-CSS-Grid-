@@ -1,97 +1,75 @@
 @use "../../presets" as *;
-@use "../../mixins/index" as *;
+@use "../../mixins" as *;
+@use "../../common" as *;
 
 .section-form {
   background-color: $color-primary;
 }
 
-.form__container {
-  @extend %container;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-auto-flow: row;
-  gap: 0 20px;
-  grid-template-areas:
+.form {
+  &__container {
+    @extend %container;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+    gap: 0 20px;
+    grid-template-areas:
     "form__name form__email form__subscribe";
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.form__name {
-  grid-area: form__name;
-  width: 420px;
-  height: 60px;
-
-}
-
-.form__input {
-  display: block;
-  width: 100%;
-  height: 60px;
-  padding-right: 30px;
-  padding-left: 30px;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: $font-main;
-  letter-spacing: 2px;
-  transition: background-color 0.5s, border-color 0.5s, color 0.5s;
-  color: $color-white;
-  border: 2px solid rgba(255, 255, 255, 0);
-  border-bottom-color: rgba(255, 255, 255, 0.50);
-  background-color: rgba(255, 255, 255, 0.05);
-
-  &:focus, &:hover {
-    border-color: rgba(255, 255, 255, 0.15);
-    border-bottom-color: $color-white;
-    background-color: rgba(255, 255, 255, 0.15);
-    color: $color-white;
-    outline: none;
-  }
-}
-
-
-.form__input:hover::placeholder,
-.form__input:focus::placeholder {
-  color: #8c9bab;
-}
-
-.form__email {
-  grid-area: form__email;
-  width: 420px;
-  height: 60px;
-
-}
-
-.form__subscribe {
-  grid-area: form__subscribe;
-  width: 420px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn--primary {
- width: 100%;
-  height: 100%;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: $font-main;
-  transition: background-color 0.5s, border-color 0.5s, color 0.5s;
-  letter-spacing: 2px;
-  color: $color-white;
-  border: 2px solid rgba(255, 255, 255, 0);
-  border-bottom-color: rgba(255, 255, 255, 0.50);
-  background-color: rgba(255, 255, 255, 0.1);
-
-  &:hover, &:focus {
-    border-color: $color-white;
-    border-width: 2px;
-    border-bottom-color: $color-white;
-    background-color: $color-accent;
-    color: $color-white;
-    outline: none;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
+  &__name {
+    grid-area: form__name;
+    width: 420px;
+    height: 60px;
+
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: $font-main;
+    letter-spacing: 2px;
+    transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+    color: $color-white;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0.50);
+    background-color: rgba(255, 255, 255, 0.05);
+
+    &:focus, &:hover {
+      border-color: rgba(255, 255, 255, 0.15);
+      border-bottom-color: $color-white;
+      background-color: rgba(255, 255, 255, 0.15);
+      color: $color-white;
+      outline: none;
+    }
+  }
+
+  &__input:hover::placeholder,
+  &__input:focus::placeholder {
+    color: #8c9bab;
+  }
+
+  &__email {
+    grid-area: form__email;
+    width: 420px;
+    height: 60px;
+
+  }
+
+  &__subscribe {
+    grid-area: form__subscribe;
+    width: 420px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

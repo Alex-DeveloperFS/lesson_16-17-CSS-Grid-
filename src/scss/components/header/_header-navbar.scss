@@ -1,31 +1,28 @@
 @use "../../presets" as *;
 @use "../../mixins" as *;
 
-
 .header__navbar {
 
-
-
   &--list {
-    margin: 0;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
     justify-content: end;
-    gap: 17px;
+    gap: 21px;
     font-weight: 400;
-    margin-right: -10px;
+    margin-right: -9px;
 
-  }
-
-  &--item {
+    @include lg {
+      margin-right: -13px;
+      gap: 20px;
+    }
 
   }
 
   &--link {
     font-size: 1.125rem;
     line-height: 1.25rem;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     color: $color-white;
     display: block;
     padding: 10px;
@@ -35,5 +32,4 @@
       color: $color-accent;
     }
   }
-
 }

@@ -1,5 +1,6 @@
 @use "../../presets" as *;
-@use "../../mixins/index" as *;
+@use "../../mixins" as *;
+@use "../../common" as *;
 
 .section-posts {
   @extend %container;
@@ -7,11 +8,11 @@
 
 .posts__title {
   font-size: 40px;
-  letter-spacing: 4.5px;
+  letter-spacing: 4px;
   line-height: 48px;
   color: $color-primary;
   font-weight: 700;
-  font-family: $font-main;
+  font-family: $font-header;
   margin-top: 102px;
 }
 
@@ -28,7 +29,7 @@
   margin-top: 56px;
 }
 
-.posts__group-1 {
+.group-1 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
@@ -42,48 +43,54 @@
   overflow: hidden;
   transition: 0.5s;
   background-color: #f2f2f2;
+  position: relative;
+
+
+  &__link {
+    @include abs-position;
+  }
+
+  &__image-block {
+    grid-area: p1;
+    @include posts__image-block;
+  }
+
+  &__image {
+    @include posts__image;
+  }
+
+  &__title--item {
+    @include posts__title--item;
+    margin-top: 71px;
+    margin-left: 2px;
+  }
+
+  &__description {
+    @include posts__description;
+    grid-area: t1;
+    width: 567px;
+    margin-top: 22px;
+    margin-left: 36px;
+  }
+
+  &:hover &__image {
+    transform: scale(1.1);
+  }
+
+  &:hover &__title--item {
+    color: $color-primary;
+  }
+
+  &:hover &__description {
+    color: $color-primary;
+  }
+
+  &:hover {
+    background-color: #d8d8d8;
+  }
 }
 
-.posts__image-block-1 {
-  grid-area: p1;
-  @extend %posts__image-block;
-}
-
-.posts__image-1 {
-@extend %posts__image;
-}
-
-.posts__title--item-1 {
-  @extend %posts__title--item;
-  margin-left: 2px;
-  margin-top: 68px;
-}
-
-.posts__description-1 {
-  @extend %posts__description;
-  grid-area: t1;
-  width: 567px;
-  margin-top: 22px;
-  margin-left: 36px;
-}
-
-.posts__group-1:hover .posts__image-1 {
-  transform: scale(1.1);
-}
-
-.posts__group-1:hover .posts__title--item-1 {
-  color: $color-primary;
-}
-
-.posts__group-1:hover .posts__description-1 {
-  color: $color-primary;
-}
-
-.posts__group-1:hover {
-  background-color: #d8d8d8;
-}
-
-.posts__group-2 {
+.group-2 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
@@ -96,48 +103,54 @@
   height: 550px;
   background-color: #EEEEEE;
   transition: 0.5s;
+  position: relative;
+
+
+  &__link {
+    @include abs-position;
+  }
+
+  &__image-block {
+    grid-area: p2;
+    @include posts__image-block;
+  }
+
+  &__image {
+    @include posts__image;
+  }
+
+  &__title--item {
+    @include posts__title--item;
+    margin-top: 48px;
+    margin-left: 0px;
+  }
+
+  &__description {
+    @include posts__description;
+    width: 275px;
+    height: 68px;
+    margin-top: 16px;
+    margin-left: 16px;
+  }
+
+  &:hover &__image {
+    transform: scale(1.1);
+  }
+
+  &:hover &__title--item {
+    color: $color-primary;
+  }
+
+  &:hover &__description {
+    color: $color-primary;
+  }
+
+  &:hover {
+    background-color: #d8d8d8;
+  }
 }
 
-.posts__image-block-2 {
-  grid-area: p2;
-  @extend %posts__image-block;
-}
-
-.posts__image-2 {
-  @extend %posts__image;
-}
-
-.posts__title--item-2 {
-  @extend %posts__title--item;
-  margin-top: 44px;
-  margin-left: 17px;
-}
-
-.posts__description-2 {
-  @extend %posts__description;
-  width: 275px;
-  height: 68px;
-  margin-top: 17px;
-  margin-left: 15px;
-}
-
-.posts__group-2:hover .posts__image-2 {
-  transform: scale(1.1);
-}
-
-.posts__group-2:hover .posts__title--item-2 {
-  color: $color-primary;
-}
-
-.posts__group-2:hover .posts__description-2 {
-  color: $color-primary;
-}
-
-.posts__group-2:hover {
-  background-color: #d8d8d8;
-}
-
-.posts__group-3 {
+.group-3 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
@@ -150,48 +163,54 @@
   height: 550px;
   background-color: #EEEEEE;
   transition: 0.5s;
+  position: relative;
+
+  &__link {
+    @include abs-position;
+  }
+
+  &__image-block {
+    grid-area: p3;
+    @include posts__image-block;
+  }
+
+  &__image {
+    @include posts__image;
+  }
+
+  &__title--item {
+    @include posts__title--item;
+    margin-top: 48px;
+    margin-left: 18px;
+    letter-spacing: 1.4px;
+  }
+
+  &__description {
+    @include posts__description;
+    width: 275px;
+    grid-area: t3;
+    margin-top: 19px;
+    margin-left: 16px;
+  }
+
+  &:hover &__image {
+    transform: scale(1.1);
+  }
+
+  &:hover &__title--item {
+    color: $color-primary;
+  }
+
+  &:hover &__description {
+    color: $color-primary;
+  }
+
+  &:hover {
+    background-color: #d8d8d8;
+  }
 }
 
-.posts__image-block-3 {
-  grid-area: p3;
-  @extend %posts__image-block;
-}
-
-.posts__image-3 {
-  @extend %posts__image;
-}
-
-.posts__title--item-3 {
-  @extend %posts__title--item;
-  margin-top: 44px;
-  margin-left: 17px;
-}
-
-.posts__description-3 {
-  @extend %posts__description;
-  width: 275px;
-  grid-area: t3;
-  margin-top: 19px;
-  margin-left: 15px;
-}
-
-.posts__group-3:hover .posts__image-3 {
-  transform: scale(1.1);
-}
-
-.posts__group-3:hover .posts__title--item-3 {
-  color: $color-primary;
-}
-
-.posts__group-3:hover .posts__description-3 {
-  color: $color-primary;
-}
-
-.posts__group-3:hover {
-  background-color: #d8d8d8;
-}
-
-.posts__group-4 {
+.group-4 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
@@ -204,50 +223,55 @@
   height: 550px;
   background-color: #EEEEEE;
   transition: 0.5s;
+  position: relative;
+
+  &__link {
+    @include abs-position;
+  }
+
+  &__image-block {
+    grid-area: p4;
+    @include posts__image-block;
+  }
+
+  &__image {
+    @include posts__image;
+  }
+
+  &__title--item {
+    @include posts__title--item;
+    width: 275px;
+    margin-top: 48px;
+    margin-left: 17px;
+  }
+
+  &__description {
+    @include posts__description;
+    width: 275px;
+    grid-area: t3;
+    height: 68px;
+    margin-top: 16px;
+    margin-left: 16px;
+  }
+
+  &:hover &__image {
+    transform: scale(1.1);
+  }
+
+  &:hover &__title--item {
+    color: $color-primary;
+  }
+
+  &:hover &__description {
+    color: $color-primary;
+  }
+
+  &:hover {
+    background-color: #d8d8d8;
+  }
 }
 
-.posts__image-block-4 {
-  grid-area: p4;
-  @extend %posts__image-block;
-}
-
-.posts__image-4 {
-  @extend %posts__image;
-}
-
-.posts__title--item-4 {
-  @extend %posts__title--item;
-  width: 275px;
-  margin-top: 44px;
-  margin-left: 17px;
-}
-
-.posts__description-4 {
-  @extend %posts__description;
-  width: 275px;
-  grid-area: t3;
-  height: 68px;
-  margin-top: 17px;
-  margin-left: 15px;
-}
-
-.posts__group-4:hover .posts__image-4 {
-  transform: scale(1.1);
-}
-
-.posts__group-4:hover .posts__title--item-4 {
-  color: $color-primary;
-}
-
-.posts__group-4:hover .posts__description-4 {
-  color: $color-primary;
-}
-
-.posts__group-4:hover {
-  background-color: #d8d8d8;
-}
-
-.posts__group-5 {
+.group-5 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
@@ -260,48 +284,55 @@
   height: 550px;
   background-color: #EEEEEE;
   transition: 0.5s;
+  position: relative;
+
+  &__link {
+    @include abs-position;
+  }
+
+  &__image-block {
+    grid-area: p5;
+    @include posts__image-block;
+  }
+
+  &__image {
+    @include posts__image;
+  }
+
+  &__title--item {
+    @include posts__title--item;
+    width: 275px;
+    margin-top: 48px;
+    margin-left: 17px;
+    letter-spacing: 1.43px;
+  }
+
+  &__description {
+    @include posts__description;
+    width: 275px;
+    grid-area: t5;
+    margin-top: 19px;
+    margin-left: 16px;
+  }
+
+  &:hover &__image {
+    transform: scale(1.1);
+  }
+
+  &:hover &__title--item {
+    color: $color-primary;
+  }
+
+  &:hover &__description {
+    color: $color-primary;
+  }
+
+  &:hover {
+    background-color: #d8d8d8;
+  }
 }
 
-.posts__image-block-5 {
-  grid-area: p5;
-  @extend %posts__image-block;
-}
-
-.posts__image-5 {
-  @extend %posts__image;
-}
-
-.posts__title--item-5 {
-  @extend %posts__title--item;
-  margin-top: 44px;
-  margin-left: 17px;
-}
-
-.posts__description-5 {
-  @extend %posts__description;
-  width: 275px;
-  grid-area: t5;
-  margin-top: 19px;
-  margin-left: 15px;
-}
-
-.posts__group-5:hover .posts__image-5 {
-  transform: scale(1.1);
-}
-
-.posts__group-5:hover .posts__title--item-5 {
-  color: $color-primary;
-}
-
-.posts__group-5:hover .posts__description-5 {
-  color: $color-primary;
-}
-
-.posts__group-5:hover {
-  background-color: #d8d8d8;
-}
-
-.posts__group-6 {
+.group-6 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
@@ -314,45 +345,50 @@
   height: 550px;
   background-color: #EEEEEE;
   transition: 0.5s;
-}
+  position: relative;
 
-.posts__image-block-6 {
-  grid-area: p6;
-  @extend %posts__image-block;
-}
+  &__link {
+    @include abs-position;
+  }
 
+  &__image-block {
+    grid-area: p6;
+    @include posts__image-block;
+  }
 
-.posts__image-6 {
-  @extend %posts__image;
-}
-.posts__title--item-6 {
-  @extend %posts__title--item;
-  margin-top: 82px;
-}
+  &__image {
+    @include posts__image;
+  }
 
-.posts__description-6 {
-  @extend %posts__description;
-  grid-area: t6;
-  width: 567px;
-  height: 68px;
-  margin-top: 23px;
-  margin-left: 35px;
-}
+  &__title--item {
+    @include posts__title--item;
+    margin-top: 85px;
+  }
 
-.posts__group-6:hover .posts__image-6 {
-  transform: scale(1.1);
-}
+  &__description {
+    @include posts__description;
+    grid-area: t6;
+    width: 567px;
+    height: 68px;
+    margin-top: 23px;
+    margin-left: 36px;
+  }
 
-.posts__group-6:hover .posts__title--item-6 {
-  color: $color-primary;
-}
+  &:hover &__image {
+    transform: scale(1.1);
+  }
 
-.posts__group-6:hover .posts__description-6 {
-  color: $color-primary;
-}
+  &:hover &__title--item {
+    color: $color-primary;
+  }
 
-.posts__group-6:hover {
-  background-color: #d8d8d8;
+  &:hover &__description {
+    color: $color-primary;
+  }
+
+  &:hover {
+    background-color: #d8d8d8;
+  }
 }
 
 .posts-btn__box {
@@ -360,31 +396,11 @@
   justify-content: center;
   margin-top: 20px;
   margin-left: 2px;
-
-
-  .posts-btn {
-    opacity: 0.800;
-    width: 350px;
-    height: 60px;
-    background-color: #2d3651;
-    border: 2px solid #2d3651;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.5s;
-
-
-    &:hover {
-      background-color: #d66926;
-      border: 2px solid #2d3651;
-    }
-
-    &__link {
-      font-size: 18px;
-      letter-spacing: 2px;
-      color: $color-white;
-      font-weight: 400;
-      font-family: $font-main;
-    }
-  }
 }
+
+.posts__btn--item {
+  padding-left: 2px;
+  letter-spacing: 1.8px;
+}
+
+
