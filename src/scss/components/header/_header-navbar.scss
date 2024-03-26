@@ -1,0 +1,35 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header__navbar {
+
+  &--list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
+    justify-content: end;
+    gap: 21px;
+    font-weight: 400;
+    margin-right: -9px;
+
+    @include lg {
+      margin-right: -14px;
+      gap: 20px;
+    }
+
+  }
+
+  &--link {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    letter-spacing: 1.55px;
+    color: $color-white;
+    display: block;
+    padding: 10px;
+    transition: 0.3s;
+
+    &:hover,&:focus {
+      color: $color-accent;
+    }
+  }
+}
